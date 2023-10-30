@@ -1,9 +1,17 @@
 // import Image from 'next/image'
 
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <div className='flex justify-center items-center'>
+    <div className='flex justify-center gap-[20px] items-center flex-col'>
       <h1>Home Page</h1>
+      <Link href={"/blog"}>
+        <h2>Blog</h2>
+      </Link>
+      <Link href={"/product"}>
+        <h2>Product</h2>
+      </Link>
     </div>
   )
 }
