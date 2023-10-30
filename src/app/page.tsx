@@ -1,8 +1,16 @@
-// import Image from 'next/image'
-
+'use client';
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { MouseEvent } from "react";
+
+
 
 export default function Home() {
+  const history = useRouter();
+  const handlePlaceOrder = (e: MouseEvent<HTMLButtonElement>)=>{
+    history.push('/product');
+  }
+
   return (
     <div className='flex justify-center gap-[20px] items-center flex-col'>
       <h1>Home Page</h1>
@@ -12,6 +20,8 @@ export default function Home() {
       <Link href={"/product"}>
         <h2>Product</h2>
       </Link>
+      <button onClick={handlePlaceOrder}>Place Order</button>
+      
     </div>
   )
 }
