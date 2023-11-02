@@ -16,7 +16,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <nav>
+          <ul className='flex justify-center gap-[20px] mb-4'>
+            <li><Link href={"/about"}>About</Link></li>
+            <li><Link href={"/blog"}>Blog</Link></li>
+            <li><Link href={"/product"}>Products</Link></li>
+            <li><Link href={"/profile"}>Profile</Link></li>
+          </ul>
+        </nav> */}
+        {children}
+      </body>
     </html>
   )
 }
