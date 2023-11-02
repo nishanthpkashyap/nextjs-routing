@@ -14,6 +14,9 @@ export default function Home() {
   return (
     <div className='flex justify-center gap-[20px] items-center flex-col'>
       <h1>Home Page</h1>
+      <Link href={"/about"}>
+        <h2>About</h2>
+      </Link>
       <Link href={"/blog"}>
         <h2>Blog</h2>
       </Link>
